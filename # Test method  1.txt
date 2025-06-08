@@ -1,0 +1,38 @@
+# Test method  1
+ def test_list_length(self):
+print("test_list length)
+self.assertEqual(len(self.data)),5 ,"Length should be 5")
+
+# Test method 2 
+def test_list_contains_element(self):
+print("test_list_contains_element")
+self.assertIn(3,self.data,"Lisgt should contain 3")
+
+# Iterator :
+An iterator in python is an object that is used to iterate over iterable objects like lists, tuples, dicts and sets.
+Iterators object is initialized using the iter() method. It uses the next() method for iteration.
+Ex.
+str = "abcde"
+ch_iterator = iter(str)
+print(next(ch_iterator))
+print(next(ch_iterator))
+
+# Generator :
+ A generator in python is a function that returns as iterator using the yield keyword.
+
+A generator function in pytho is defined like a normal function, but whenever it need to generate a value , it does so with yeild keyword rather than return.
+Syntax :
+def function_name():
+yield statement 
+
+Ex. def oper(x,y):
+yield x+y 
+yield x-y
+yield x* y
+yield x / y
+
+obj = oper(4, 3)
+print(next(obj))
+print(next(obj))
+print(next(obj))
+print(next(obj))

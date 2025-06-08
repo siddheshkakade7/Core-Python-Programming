@@ -1,0 +1,27 @@
+# Sql commands :
+
+1) Creating a Database -
+CREATE DATABASE database_name 
+
+mycursor = mydb.cursor()
+mycursor.execute("CREATE DATABASE mydatabase")
+mydb.commit()
+
+2) Can see all the databses available in system - 
+SHOW DATABASES 
+mycursor.execute("SHOW DATABSES")
+for x in mycursor:
+print(x)
+
+8) Insert Multiple Rows :
+to insert multiple rows into a table ,use the executemany() method.
+
+Val = [
+('abc','def'),('ghj','jkl')
+]
+
+9)"SELECT" statement:
+mycursor.execute("SELECT from customers")
+myresult = mycursor.fetchall()
+for x in myresult:
+print(x)
